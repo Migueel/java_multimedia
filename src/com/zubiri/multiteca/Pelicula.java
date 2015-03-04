@@ -7,7 +7,7 @@ public class Pelicula extends Obra{
 	private String productora;
 	private ArrayList<Artista> interpretes;
 	
-	public Pelicula(String titulo, Artista autor, int añoEdicion, String productora, ArrayList<Artista> interpretes) {
+	public Pelicula(String titulo, Artista autor, int aÃ±oEdicion, String productora, ArrayList<Artista> interpretes) {
 		
 	}
 		
@@ -31,7 +31,13 @@ public class Pelicula extends Obra{
 		this.interpretes = interpretes;
 	}
 	
+	@override
 	public String formattedObra() {
+		String formattedPelicula = 
+				super.formattedObra() +"\n"
+				+"\tPRODUCTORA: " +this.productora +"\n"
+				+"\tINTERPRETES: " +this.interpretes +"\n"
+		
 		
 	}
 

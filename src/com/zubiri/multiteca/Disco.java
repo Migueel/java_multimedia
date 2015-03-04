@@ -5,7 +5,7 @@ public class Disco extends Obra{
 	private String discografia;
 	private int nCanciones;
 	
-	public Disco(String titulo, Artista autor, int añoEdicion, String discografia, int nCanciones) {
+	public Disco(String titulo, Artista autor, int aÃ±oEdicion, String discografia, int nCanciones) {
 		
 	}
 	
