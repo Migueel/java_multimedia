@@ -1,12 +1,12 @@
-package com.zubiri.multiteca;
+
 
 public class Libro extends Obra{
 	
 	private String editorial;
 	private int numPaginas;
 	
-	public Libro(String titulo, Artista autor, int aÃ±oEdicion, String editorial, int numPaginas) {
-		
+	public Libro(String titulo, Artista autor, int añoEdicion, String editorial, int numPaginas) {
+		super();
 	}
 	
 	public String getEditorial() {
@@ -28,9 +28,18 @@ public class Libro extends Obra{
 		
 		this.numPaginas = numPaginas;
 	}
-	
+	@Override
 	public String formattedObra() {
-		
+		String showLibro =
+		super.formattedObra()
+		+"\tLa editorial es: " + this.editorial + "\n"
+		+"\tEl número de páginas es: "+ this.numPaginas + "\n";
+
+		return showLibro;
 	}
+	
+	
+	
+	
 
 }

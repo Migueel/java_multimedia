@@ -1,4 +1,4 @@
-package com.zubiri.multiteca;
+
 
 import java.util.ArrayList;
 
@@ -7,8 +7,9 @@ public class Pelicula extends Obra{
 	private String productora;
 	private ArrayList<Artista> interpretes;
 	
-	public Pelicula(String titulo, Artista autor, int aÃ±oEdicion, String productora, ArrayList<Artista> interpretes) {
-		
+	public Pelicula(String titulo, Artista autor, int añoEdicion, String productora, ArrayList<Artista> interpretes) {
+		this.productora=productora;
+		this.interpretes=interpretes;
 	}
 		
 	public String getProductora() {
@@ -30,15 +31,14 @@ public class Pelicula extends Obra{
 		
 		this.interpretes = interpretes;
 	}
-	
-	@override
+	@Override
 	public String formattedObra() {
-		String formattedPelicula = 
-				super.formattedObra() +"\n"
-				+"\tPRODUCTORA: " +this.productora +"\n"
-				+"\tINTERPRETES: " +this.interpretes +"\n"
-		
-		
+		String showPelicula =
+				super.formattedObra()
+				+"\tLa productora es: " + this.productora + "\n"
+				+"\tLos intérpretes son: "+ this.interpretes + "\n";
+
+				return showPelicula;
 	}
 
 }
